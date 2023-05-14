@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registrations
+{% endblock %}
+
+{% block content %}
+    <h1>Registered users</h1>
+    {% if registrations %}
+        <ul>
+        {% for name, organization in registrations.items() %}
+            <li>{{ name }} - {{ organization }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No registrations yet.</p>
+    {% endif %}
+{% endblock %}

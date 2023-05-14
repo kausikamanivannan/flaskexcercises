@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result - {{ number }}
+{% endblock %}
+
+{% block content %}
+    {% if error %}
+        <h1>Error: {{ error }}</h1>
+    {% else %}
+        <h1>{{ number }} is {{ message }}</h1>
+    {% endif %}
+    <a href="/">Back home</a>
+{% endblock %}
